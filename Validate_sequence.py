@@ -23,3 +23,12 @@ def isValidSubsequence(array, sequence):
         
 # Solution 2 - 
 
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+    seqId = 0
+    for value in array:
+        if seqId == len(sequence):
+            break
+        if sequence[seqId] == value:
+            seqId +=1
+    return seqId == len(sequence)
